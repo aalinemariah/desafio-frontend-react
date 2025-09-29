@@ -24,7 +24,8 @@ const ProductCard = ({ id, nome, imagem, preço, vegano }) => {
         />
     </div>
     <h3 className="products__list--price">
-        {formatPrice(preço)} {preço < 1000 && <span className="text-gray-500 line-through ml-2">{formatPrice(preço + 200)}</span>} 
+        R$ {formatarPreco(preco.por)}{" "}
+        {preco.de > preco.por && <span>R$ {formatarPreco(preco.de)}</span>}
     </h3>
     <h4 className="products__list--name">{nome}</h4>
     {vegano && (
