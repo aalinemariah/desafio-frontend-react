@@ -1,5 +1,6 @@
 import React from 'react';
 import PlantImage from '/src/assets/Plant.png';
+import CowImage from '../assets/Cow.png'
 
 
 const ProductCard = ({ id, nome, imagem, preço, vegano }) => {
@@ -23,7 +24,7 @@ const ProductCard = ({ id, nome, imagem, preço, vegano }) => {
         />
     </div>
     <h3 className="products__list--price">
-        {formatPrice(preço)} {preço < 1000 && <span className="text-gray-500 line-through ml-2">{formatPrice(preço + 200)}</span>}
+        {formatPrice(preço)} {preço < 1000 && <span className="text-gray-500 line-through ml-2">{formatPrice(preço + 200)}</span>} 
     </h3>
     <h4 className="products__list--name">{nome}</h4>
     {vegano && (
@@ -31,6 +32,9 @@ const ProductCard = ({ id, nome, imagem, preço, vegano }) => {
             <img src={PlantImage} alt="planta" />
             <span>Vegano</span>
         </div>
+       
+
+        
     )}
 </a>
     );}
